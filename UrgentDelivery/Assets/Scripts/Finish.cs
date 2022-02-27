@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Finish : MonoBehaviour
 {
+    public GameObject finishPanel;
+
     void OnTriggerEnter(Collider col)
     {
         if(col.gameObject.tag == "Car")
         {
-            Debug.Log("FINISH!");
+            finishPanel.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 
